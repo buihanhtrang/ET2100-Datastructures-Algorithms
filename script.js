@@ -20,6 +20,20 @@ const schedule = [
   ['16', 'Vũ Hải',      'Ôn tập Cuối kỳ']
 ];
 
+const slides = [
+  ['Giới thiệu môn học', '0.Giới thiệu môn học.pdf'],
+  ['Tuần 1 - C++ cơ bản', 'W1.CC++simple.pdf'],
+  ['Tuần 1 - Chương 1: Tổng quan CTDL và GT', 'W1.Chuong1_TongQuanCTDLvaGT.pdf'],
+  ['Tuần 2 - Chương 1: Tổng quan CTDL và GT', 'W2.Chuong1_TongQuanCTDLvaGT.pdf'],
+  ['Tuần 3 - Chương 2: Mảng và danh sách', 'W3.Chuong2_Array_List.pdf'],
+  ['Tuần 5 - Chương 2: Mảng và danh sách', 'W5.Chuong2_Array_List.pdf'],
+  ['Tuần 7 - Chương 3: Giải thuật đệ quy', 'W7.Chuong3_GiaiThuatDeQuy.pdf'],
+  ['Tuần 8-9 - Chương 4: Cấu trúc cây', 'W8-9.Chuong4_CauTrucCay.pdf'],
+  ['Tuần 12 - Chương 5: Sắp xếp', 'W12.Chuong5_SapXep.pdf'],
+  ['Tuần 13 - Chương 6: Tìm kiếm', 'W13.Chuong6_TimKiem.pdf'],
+  ['Tuần 15 - Chương 7: Đồ thị', 'W15.Chuong7_DoThi.pdf'],
+];
+
 const scheduleBody = document.querySelector('#schedule-body');
 schedule.forEach(([week, lecturer, topic]) => {
   const row = document.createElement('tr');
@@ -35,4 +49,16 @@ document.querySelectorAll('.course-info .materials-link').forEach((link) => {
   link.href = slideUrl;
   link.target = '_blank';
   link.rel = 'noreferrer';
+});
+
+const slideList = document.querySelector('#slide-list');
+slides.forEach(([title, filename]) => {
+  const item = document.createElement('li');
+  const link = document.createElement('a');
+  link.href = encodeURI(`output/pdf/${filename}`);
+  link.target = '_blank';
+  link.rel = 'noreferrer';
+  link.textContent = `${title} (PDF) ↗`;
+  item.append(link);
+  slideList.append(item);
 });
