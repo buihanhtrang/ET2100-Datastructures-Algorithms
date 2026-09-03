@@ -26,7 +26,7 @@ dt, .course-info strong { color: #555; font-weight: bold; } dd { margin: 4px 0 0
 .table-wrap { overflow-x: auto; margin-top: 20px; border: 1px solid #d8d8d8; }
 table { width: 100%; min-width: 590px; border-collapse: collapse; font-size: 14px; text-align: left; }
 th, td { border-top: 1px solid #dedede; padding: 12px 16px; } thead th { border: 0; background: #f0f0f0; } td:first-child { font-weight: bold; }
-.resources { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }.resources section { border-top: 2px solid #333; padding-top: 16px; }.resources h2 { font-size: 18px; }
+.resources { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }.resources section { border-top: 2px solid #333; padding-top: 16px; }.resources h2 { font-size: 18px; }
 .materials-link { color: var(--red); font-size: 14px; font-weight: bold; text-decoration: underline; text-underline-offset: 2px; }
 .course-info { border-left: 1px solid var(--line); }.course-info h2 { border-bottom: 1px solid #cfcfcf; padding-bottom: 12px; font-size: 18px; }.course-info div { margin-top: 20px; }.course-info p { margin: 3px 0; }
 @media (max-width: 900px) { .page-layout { grid-template-columns: 1fr; }.left-menu, .course-info { border: 0; border-bottom: 1px solid var(--line); }.left-menu { order: 1; }.course-info { order: 3; } main { order: 2; }.left-menu nav { display: flex; flex-wrap: wrap; gap: 4px; }.left-menu nav a { padding: 8px; }.course-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }.course-info h2 { grid-column: 1 / -1; }.course-info div { margin: 0; } }
