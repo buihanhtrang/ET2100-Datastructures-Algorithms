@@ -14,8 +14,8 @@ const schedule = [
   ['10', 'Vũ Hải',      'Chương 5 · Sắp xếp'],
   ['11', 'Vũ Hải',      'Chương 6 · Tìm kiếm'],
   ['12', 'Hạnh Trang',  'Bài tập 03 · Sắp xếp & Tìm kiếm'],
-  ['13', 'Anh Quang',   'Chương 7 · Đồ thị'],
-  ['14', 'Anh Quang',   'Chương 7 · Đồ thị (tiếp)'],
+  ['13', 'Anh Quang',   'Chương 7 · Bảng băm'],
+  ['14', 'Anh Quang',   'Chương 7 · Đồ thị'],
   ['15', 'Hạnh Trang',  'Bài tập 04 · Đồ thị & ứng dụng thuật toán'],
   ['16', 'Vũ Hải',      'Ôn tập Cuối kỳ']
 ];
@@ -31,7 +31,13 @@ const slides = [
   ['Tuần 8-9 - Chương 4: Cấu trúc cây', 'W8-9.Chuong4_CauTrucCay.pdf'],
   ['Tuần 12 - Chương 5: Sắp xếp', 'W12.Chuong5_SapXep.pdf'],
   ['Tuần 13 - Chương 6: Tìm kiếm', 'W13.Chuong6_TimKiem.pdf'],
+  ['Tuần 14 - Chương 7: Bảng băm', 'W14.Chuong7_BangBam.pdf'],
   ['Tuần 15 - Chương 7: Đồ thị', 'W15.Chuong7_DoThi.pdf'],
+];
+
+const practiceSlides = [
+  ['Bài thực hành 00 - Cài đặt VS Code và C/C++', 'Prac0-SetupVSCodeandC.pptx'],
+  // ['Bài thực hành 01 - Cài đặt VS Code và C/C++', 'Prac1-SetupVSCodeandC.pptx'],
 ];
 
 const scheduleBody = document.querySelector('#schedule-body');
@@ -61,4 +67,16 @@ slides.forEach(([title, filename]) => {
   link.textContent = `${title} (PDF) ↗`;
   item.append(link);
   slideList.append(item);
+});
+
+const practiceSlideList = document.querySelector('#practice-slide-list');
+practiceSlides.forEach(([title, filename]) => {
+  const item = document.createElement('li');
+  const link = document.createElement('a');
+  link.href = encodeURI(`slides/${filename}`);
+  link.target = '_blank';
+  link.rel = 'noreferrer';
+  link.textContent = `${title} (PPTX) ↗`;
+  item.append(link);
+  practiceSlideList.append(item);
 });

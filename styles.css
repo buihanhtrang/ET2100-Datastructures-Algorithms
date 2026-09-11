@@ -1,7 +1,7 @@
 :root { --red: #a31f34; --dark: #242424; --line: #ddd; --muted: #666; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: #1f1f1f; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+body { margin: 0; min-width: 320px; color: #1f1f1f; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
 .site-header { border-bottom: 5px solid var(--red); background: var(--dark); color: white; }
 .header-content { display: flex; gap: 20px; align-items: center; max-width: 1280px; margin: auto; padding: 20px 32px; }
 .header-content strong { border-right: 1px solid #ffffff66; padding-right: 20px; font-size: 20px; }
@@ -13,7 +13,7 @@ body { margin: 0; color: #1f1f1f; font-family: Arial, Helvetica, sans-serif; lin
 nav a { display: block; padding: 8px 16px; color: inherit; font-size: 14px; text-decoration: none; }
 nav a:hover { background: white; color: var(--red); }
 nav .active { border-left: 4px solid var(--red); background: white; color: var(--red); font-weight: bold; }
-main { min-width: 0; padding: 36px 44px; }
+main { min-width: 0; padding: 36px 44px; overflow-wrap: anywhere; }
 .eyebrow { margin: 0; color: var(--red); font-size: 14px; font-weight: bold; }
 h1 { margin: 6px 0 0; font-size: 36px; line-height: 1.15; }
 h2 { margin: 0; font-size: 24px; line-height: 1.25; }
@@ -31,4 +31,4 @@ th, td { border-top: 1px solid #dedede; padding: 12px 16px; } thead th { border:
 .slide-list { margin: 16px 0 0; padding: 0; list-style: none; }.slide-list li { border-top: 1px solid var(--line); }.slide-list li:last-child { border-bottom: 1px solid var(--line); }.slide-list a { display: block; padding: 9px 2px; color: var(--red); font-size: 14px; font-weight: bold; text-decoration: underline; text-underline-offset: 2px; }
 .course-info { border-left: 1px solid var(--line); }.course-info h2 { border-bottom: 1px solid #cfcfcf; padding-bottom: 12px; font-size: 18px; }.course-info div { margin-top: 20px; }.course-info p { margin: 3px 0; }
 @media (max-width: 900px) { .page-layout { grid-template-columns: 1fr; }.left-menu, .course-info { border: 0; border-bottom: 1px solid var(--line); }.left-menu { order: 1; }.course-info { order: 3; } main { order: 2; }.left-menu nav { display: flex; flex-wrap: wrap; gap: 4px; }.left-menu nav a { padding: 8px; }.course-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }.course-info h2 { grid-column: 1 / -1; }.course-info div { margin: 0; } }
-@media (max-width: 600px) { .header-content, main { padding-left: 20px; padding-right: 20px; }.header-content { gap: 12px; }.header-content strong { padding-right: 12px; }.page-layout { display: flex; flex-direction: column; } h1 { font-size: 30px; } dl, .resources, .course-info { grid-template-columns: 1fr; }.course-info h2 { grid-column: auto; } }
+@media (max-width: 600px) { .header-content, main { padding-left: 20px; padding-right: 20px; }.header-content { align-items: flex-start; flex-direction: column; gap: 4px; padding-top: 16px; padding-bottom: 16px; }.header-content strong { border-right: 0; padding-right: 0; }.header-content span { font-size: 13px; }.page-layout { display: flex; flex-direction: column; } main { padding-top: 28px; padding-bottom: 28px; } h1 { font-size: clamp(26px, 8vw, 30px); } h2 { font-size: 21px; } .intro { font-size: 15px; line-height: 1.6; } section { margin-top: 32px; } dl, .resources, .course-info { grid-template-columns: 1fr; } dl { gap: 14px; padding: 16px 0; } .left-menu, .course-info { padding: 18px 20px; }.left-menu nav { flex-wrap: nowrap; margin: 0 -4px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; }.left-menu nav a { flex: 0 0 auto; white-space: nowrap; }.course-info h2 { grid-column: auto; }.course-info { gap: 14px; }.table-wrap { margin-right: -20px; border-right: 0; } th, td { padding: 10px 12px; } .resources { gap: 24px; } }
