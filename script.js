@@ -37,7 +37,6 @@ const slides = [
 
 const practiceSlides = [
   ['Bài thực hành 00 - Cài đặt VS Code và C/C++', 'Prac0-SetupVSCodeandC.pdf'],
-  // ['Bài thực hành 01 - Cài đặt VS Code và C/C++', 'Prac1-SetupVSCodeandC.pptx'],
 ];
 
 const scheduleBody = document.querySelector('#schedule-body');
@@ -73,7 +72,7 @@ const practiceSlideList = document.querySelector('#practice-slide-list');
 practiceSlides.forEach(([title, filename]) => {
   const item = document.createElement('li');
   const link = document.createElement('a');
-  link.href = encodeURI(`slides/${filename}`);
+  link.href = encodeURI(`../output/practice/${filename}`);
   link.target = '_blank';
   link.rel = 'noreferrer';
   link.textContent = `${title} (PDF) ↗`;
