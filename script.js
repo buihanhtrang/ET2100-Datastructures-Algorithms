@@ -36,7 +36,7 @@ const slides = [
 ];
 
 const practiceSlides = [
-  ['Bài thực hành 00 - Cài đặt VS Code và C/C++', 'Prac0-SetupVSCodeandC.pptx'],
+  ['Bài thực hành 00 - Cài đặt VS Code và C/C++', 'Prac0-SetupVSCodeandC.pdf'],
   // ['Bài thực hành 01 - Cài đặt VS Code và C/C++', 'Prac1-SetupVSCodeandC.pptx'],
 ];
 
