@@ -76,7 +76,7 @@ practiceSlides.forEach(([title, filename]) => {
   link.href = encodeURI(`slides/${filename}`);
   link.target = '_blank';
   link.rel = 'noreferrer';
-  link.textContent = `${title} (PPTX) ↗`;
+  link.textContent = `${title} (PDF) ↗`;
   item.append(link);
   practiceSlideList.append(item);
 });
